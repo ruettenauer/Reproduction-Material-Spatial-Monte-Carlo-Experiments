@@ -1,5 +1,16 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+``` 
 
 # Reproduction-Material-Spatial-Monte-Carlo-Experiments
 
@@ -14,7 +25,7 @@ The codes needs the following folders: “01\_Script”, “02\_Data”,
 
 The following packages are necessary for reproduction of main results:
 
-``` r
+```{r pkgs, eval = FALSE} 
 install.packages("ggmap")
 install.packages("RgoogleMaps") 
 install.packages("foreign")
@@ -42,7 +53,7 @@ generated in the “03\_Output” directory.
 
 Note that reproducing the results with R=1000 simulation runs may take a
 lot of time on a conventional computer. Thus, all simulation programs
-are also available as “~\_hpc” version for usage on a high performance
+are also available as "~\_hpc" version for usage on a high performance
 cluster with the package “doParallel”. Depending on your system, you
 need to set up additional batch files to pass the code to a high
 performance cluster. However, it may decrease simulation time
